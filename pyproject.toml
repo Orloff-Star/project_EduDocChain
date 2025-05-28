@@ -1,0 +1,31 @@
+[build-system]
+requires = ["uv>=0.1.0", "setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edudocchain"
+version = "0.1.0"
+description = "Digital platform for educational document management"
+authors = [{name = "EagleStar", email = "ii-sys@mail.ru"}]
+dependencies = [
+    "django>=5.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.0",
+    "django-environ>=0.11",
+    "pillow>=10.0",
+    "reportlab>=4.0",
+    "weasyprint>=58.0",
+    "qrcode>=7.4",
+    "djangorestframework>=3.14",
+    "uvicorn>=0.23",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1",
+    "black>=23.0",
+    "mypy>=1.0",
+    "django-debug-toolbar>=4.0",
+    "pytest>=7.0",
+    "pytest-django>=4.0",
+]
